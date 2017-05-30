@@ -1,0 +1,12 @@
+<h1>Hello {{name}}</h1>
+<img src="{{imageUrl}}" height="{{height}}" width="{{width}}">
+<button class="btn" [class.btn-success]="isSuccess" >Bootsratped</button>
+<input type="checkbox" class="checkbox" [(ngModel)]="isSuccess" name="check"  /> isSuccess
+<input type="checkbox" class="checkbox" [(ngModel)]="isButton" name="check"  /> isButton
+<button
+[ngClass]="{
+    'btn':isButton,
+    'btn-success':isSuccess
+}">
+button using class</button>
+<input type="button" value="M button" aria-label="I am button" />
