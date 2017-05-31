@@ -1,0 +1,38 @@
+<h1>Shopping cart</h1>
+
+
+<div class="container">
+<form #f="ngForm" (ngSubmit)="onFormSubmit(f.form,$event)" novalidate>
+    <div class="form-group">
+        Name : <input type="text" name="name" [(ngModel)]="newProduct.name" class="form-control" required>
+        Price: <input type="text" name="price" [(ngModel)]="newProduct.price" class="form-control">
+        Rating: <input type="text" name="rating" [(ngModel)]="newProduct.rating" class="form-control">
+        Quantity: <input type="text" name="quantity" [(ngModel)]="newProduct.quantity" class="form-control">
+        Date: <input type="date" name="date" [(ngModel)]="newProduct.date" class="form-control">
+        <br />
+        <button class="btn btn-primary" [disabled]="!f.valid" >Add Product >></button>
+        
+    </div>
+</form>
+
+<div *ngIf="products.length==0">
+    You dont have any project yet
+</div>
+<div *ngIf="products.length!=0">
+<div *ngFor="let p of products" (click)="editForm(p)">
+    <product [pDetails]="p"></product>
+</div>
+</div>
+
+</div>
+<!--<div>
+    <label>Search Product here</label> <input type="text" [(ngModel)]="name">
+</div>
+<div [ngSwitch]="name">
+<div *ngFor="let p of products">
+    <product *ngSwitchCase="p.name" [pDetails]="p"></product>
+</div>
+<div *ngIf="name.length!=0">
+<p *ngSwitchDefault>No Product found</p>
+</div>
+</div>-->

@@ -1,20 +1,20 @@
 .Product{
-            background-color: lightgreen;
-            box-shadow: 10px 10px 5px #888888;
-            border-radius:10px;
-            border:2px solid;
-            margin:20px;
-            padding:20px;
-            width:300px;
-            transition:width 2s,height 2s,transform 2s;
-            float: left
-        }
+    background-color: lightsalmon;
+    box-shadow: 10px 10px 5px #888888;
+    border-radius:10px;
+    border:2px solid;
+    margin:20px;
+    padding:20px;
+    width:300px;
+    transition:width 2s,height 2s,transform 2s;
+    float: left
+}
 .Product b{
     display: block
 }
-        /*.Product:hover {
-            width:1200px;
-            height:800px;
-            background-color: #888888;
-            transform:rotate(360deg);
-        }*/
+/*.Product:hover {
+    width:1200px;
+    height:800px;
+    background-color: #888888;
+    transform:rotate(360deg);
+}*/
