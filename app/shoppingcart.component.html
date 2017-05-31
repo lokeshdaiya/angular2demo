@@ -16,7 +16,7 @@
 </form>
 
 <div *ngIf="products.length==0">
-    You dont have any project yet
+    You dont have any product yet
 </div>
 <div *ngIf="products.length!=0">
 <div *ngFor="let p of products" (click)="editForm(p)">
